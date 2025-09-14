@@ -3,6 +3,9 @@ import Counter from "./components/Counter";
 import Text from "./components/Text";
 import Input from "./components/Input";
 import Form from "./components/Form";
+import List from "./components/List";
+import RandomBackground from "./components/RandomBackground";
+import LightSwitch from "./components/LightSwitch";
 
 const App = () => {
   return (
@@ -11,6 +14,9 @@ const App = () => {
       {/* <Text /> */}
       <Input />
       <Form />
+      <List />
+      <RandomBackground />
+      <LightSwitch />
     </div>
   );
 };

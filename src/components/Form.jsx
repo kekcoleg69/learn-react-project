@@ -5,7 +5,6 @@ const Form = () => {
   let [age, setAge] = useState("");
   let [savedName, setSavedName] = useState("");
   let [savedAge, setSavedAge] = useState("");
-
   return (
     <div>
       <input

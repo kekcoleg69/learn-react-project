@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 const Counter = () => {
   let [number, setNumber] = useState(0);
-  console.log(number);
   function plus() {
     if (number < 10) {
       setNumber(number + 1);

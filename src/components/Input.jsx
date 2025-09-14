@@ -13,7 +13,6 @@ const Input = () => {
         type="text"
         onChange={(evt) => {
           setText(evt.target.value);
-          console.log(text.length);
         }}
       />
       <p>Привет, {text}</p>
