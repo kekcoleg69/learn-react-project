@@ -1,9 +1,3 @@
 .container{
-	background-color: white;
-}
-.title{
-	background-color: blue
-}
-.text{
-	background-color:red
+	height: 100vh;
 }

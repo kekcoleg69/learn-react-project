@@ -1,41 +1,31 @@
 import React, { useState } from "react";
 
-const Form = () => {
-  let [name, setName] = useState("");
-  let [age, setAge] = useState("");
-  let [savedName, setSavedName] = useState("");
-  let [savedAge, setSavedAge] = useState("");
+function Form({ add, title, tasks }) {
+  const [text, setText] = useState("");
+
   return (
     <div>
-      <input
-        value={name}
-        type="text"
-        placeholder="Имя"
-        onChange={(evt) => {
-          setName(evt.target.value);
-        }}
-      />
-      <input
-        value={age}
-        type="text"
-        placeholder="Возраст"
-        onChange={(evt) => {
-          setAge(evt.target.value);
-        }}
-      />
-      <button
-        onClick={() => {
-          setSavedName(name);
-          setSavedAge(age);
-        }}
-      >
-        Сохранить
-      </button>
-      <span>
-        Имя: {savedName}, возраст : {savedAge}
-      </span>
+      <h1>{title}</h1>
+      <form action="">
+        <input
+          type="text"
+          value={text}
+          onChange={(evt) => {
+            setText(evt.target.value);
+          }}
+        />
+        <button
+          onClick={(evt) => {
+            evt.preventDefault();
+            add(text);
+            setText("");
+          }}
+        >
+          Добавить задачу
+        </button>
+      </form>
     </div>
   );
-};
+}
 
 export default Form;
